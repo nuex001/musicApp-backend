@@ -109,8 +109,8 @@ app.post("/api", async (req, res) => {
       const names = file.name.split(".");
       const ext_names = names[names.length - 1];
       const fileName = Date.now() + "." + ext_names;
-      const mvPath = "https://musicapp-5woy.onrender.com/client/public/audio" + fileName;
-      cover = mvPath;
+      const mvPath = "https://musicapp-5woy.onrender.com/client/public/audio/" + fileName;
+      cover = "public/audio/" + fileName;
       await file.mv(mvPath, function (err) {});
     } else {
       throw audio;
