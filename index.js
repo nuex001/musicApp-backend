@@ -134,10 +134,7 @@ app.post("/api", async (req, res) => {
       } else {
         type = "abulm";
         await req.files.songs.forEach(async (file) => {
-          //   console.log(file.name);
           const fileName = file.name;
-          // const ext_names = names[names.length - 1];
-          // const fileName = Date.now() + "." + ext_names;
           dirPath = `audio/${fileName}`;
           filesDir.push(dirPath);
           const mvPath = "audio/" + fileName;
