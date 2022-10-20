@@ -109,8 +109,8 @@ app.post("/api", async (req, res) => {
       const names = file.name.split(".");
       const ext_names = names[names.length - 1];
       const fileName = Date.now() + "." + ext_names;
-      const mvPath = "https://musicapp-5woy.onrender.com/client/public/audio/" + fileName;
-      cover = "public/audio/" + fileName;
+      const mvPath = "images/" + fileName;
+      cover = mvPath;
       await file.mv(mvPath, function (err) {});
     } else {
       throw audio;
@@ -129,7 +129,7 @@ app.post("/api", async (req, res) => {
         // const fileName = Date.now() + "." + ext_names;
         dirPath = `audio/${fileName}`;
         filesDir.push(dirPath);
-        const mvPath = "https://musicapp-5woy.onrender.com/public/audio/" + fileName;
+        const mvPath = "audio/" + fileName;
         await file.mv(mvPath, function (err) {});
       } else {
         type = "abulm";
@@ -140,7 +140,7 @@ app.post("/api", async (req, res) => {
           // const fileName = Date.now() + "." + ext_names;
           dirPath = `audio/${fileName}`;
           filesDir.push(dirPath);
-          const mvPath = "https://musicapp-5woy.onrender.com/public/audio/" + fileName;
+          const mvPath = "audio/" + fileName;
           await file.mv(mvPath, function (err) {});
         });
       }
