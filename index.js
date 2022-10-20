@@ -129,7 +129,7 @@ app.post("/api", async (req, res) => {
         // const fileName = Date.now() + "." + ext_names;
         dirPath = `audio/${fileName}`;
         filesDir.push(dirPath);
-        const mvPath = "https://musicapp-5woy.onrender.com/client/public/audio" + fileName;
+        const mvPath = "https://musicapp-5woy.onrender.com/client/public/audio/" + fileName;
         await file.mv(mvPath, function (err) {});
       } else {
         type = "abulm";
@@ -140,7 +140,7 @@ app.post("/api", async (req, res) => {
           // const fileName = Date.now() + "." + ext_names;
           dirPath = `audio/${fileName}`;
           filesDir.push(dirPath);
-          const mvPath = "https://musicapp-5woy.onrender.com/client/public/audio" + fileName;
+          const mvPath = "https://musicapp-5woy.onrender.com/client/public/audio/" + fileName;
           await file.mv(mvPath, function (err) {});
         });
       }
