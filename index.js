@@ -27,7 +27,7 @@ app.use("/audio", express.static("audio"));
 let dbURL;
 if (process.env.NODE_ENV === "production") {
   dbURL =
-    "mongodb+srv://cabNuex:0EdwD4qQ8ivizsfC@cluster0.vke1o.mongodb.net/?retryWrites=true&w=majority";
+    "mongodb+srv://nuex:jCW5XBVxuGBd42es@cluster0.1vwqfr6.mongodb.net/test";
 }
 if (process.env.NODE_ENV !== "production") {
   dbURL = "mongodb://127.0.0.1:27017/MusicApp";
