@@ -109,7 +109,7 @@ app.post("/api", async (req, res) => {
       const names = file.name.split(".");
       const ext_names = names[names.length - 1];
       const fileName = Date.now() + "." + ext_names;
-      const mvPath = "images/" + fileName;
+      const mvPath = "https://musicapp-5woy.onrender.com/client/public/audio" + fileName;
       cover = mvPath;
       await file.mv(mvPath, function (err) {});
     } else {
