@@ -53,7 +53,7 @@ mongoose
 app.get("/api/downloads/",async (req,res)=>{
   const {fileName} = req.query;
   try {
-    const file = __dirname +"/"+ fileName
+    const file = `https://musicapp-5woy.onrender.com/client/public/audio${fileName}`
     res.download(file);
   } catch (error) {
     console.log(error);
