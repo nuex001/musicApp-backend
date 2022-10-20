@@ -73,7 +73,7 @@ app.get("/api", async (req, res) => {
 /**
  * @Search
  */
-app.get("/api/search", async (req, res) => {
+app.get("/api/searchs", async (req, res) => {
   try {
     const { q } = req.query;
     // console.log(q);
