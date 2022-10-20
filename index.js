@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const upload = require("express-fileupload");
 const cors =require("cors")
+const path = require("path");
 // const { v4: uuidv4 } = require("uuid");
 const { Audio } = require("./Schema");
 
@@ -20,7 +21,7 @@ app.use(bodyParser.json());
 app.use(cors())
 //
 // parse application/json
-app.use("/images", express.static("images"));
+app.use("/images", express.static(path.join(__dirname,"images")));
 app.use("/audio", express.static("audio"));
 
 // connecting db
