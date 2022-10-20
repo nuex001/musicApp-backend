@@ -20,8 +20,8 @@ app.use(bodyParser.json());
 app.use(cors())
 //
 // parse application/json
-app.use("/images", express.static("https://musicapp-api.onrender.com/"));
-app.use("/audio", express.static("https://musicapp-api.onrender.com/"));
+app.use("/images", express.static("images"));
+app.use("/audio", express.static("audio"));
 
 // connecting db
 let dbURL;
